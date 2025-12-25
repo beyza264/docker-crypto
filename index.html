@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kripto Takip | Sanal Cüzdan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🚀 Kripto Radar</h1>
+        <p>Piyasayı takip et, favorilerini cüzdanına ekle.</p>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="cryptoInput" placeholder="Coin adı girin (örn: bitcoin, ethereum, ripple)">
+        <button onclick="searchCoin()">Ara & Getir</button>
+    </div>
+
+    <div id="resultCard" class="crypto-card hidden">
+        <div class="card-header">
+            <img id="coinImg" src="" alt="coin">
+            <h2 id="coinName">Bitcoin</h2>
+            <span id="coinSymbol">BTC</span>
+        </div>
+        
+        <div class="price-info">
+            <div class="price" id="currentPrice">$0.00</div>
+            <div class="change" id="priceChange">%0.00</div>
+        </div>
+
+        <button class="add-btn" onclick="addToWallet()">💼 Cüzdanıma Ekle</button>
+    </div>
+
+    <div class="wallet-section">
+        <h3>💰 Cüzdanım (Kaydedilenler)</h3>
+        <ul id="walletList">
+            </ul>
+        <button onclick="clearWallet()" class="clear-btn">Cüzdanı Sıfırla</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
